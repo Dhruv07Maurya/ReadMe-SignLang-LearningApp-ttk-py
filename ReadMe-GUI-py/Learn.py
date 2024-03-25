@@ -1,3 +1,5 @@
+#new
+
 from tkvideo import tkvideo
 from tkinter import *
 from PIL import Image, ImageTk
@@ -11,9 +13,16 @@ import openpyxl
 
 
 
-root=tb.Window(themename="darkly")
-root.geometry("990x660+200+10")
-root.title("MultipleFrames")
+# root=tb.Window(themename="darkly")
+# root.geometry("1300x770+200+10")
+# root.title("MultipleFrames")
+
+root=Tk()
+
+root.geometry('990x660+200+10')
+
+root.title('Login Page')
+root.configure(background="black")
 
 wrong=0
 correct=1
@@ -97,7 +106,7 @@ def nxtpg():
         total=wrong + correct
         print(f"total number of question: {total}")
 # .............................................. sending quizz data to excel....................................
-        filepath=r"C:\Users\EnKash\Desktop\ReadMe-GUI-py\del3.xlsx"
+        filepath=r"C:\Users\maury\OneDrive\Desktop\ReadMe-SignLang-LearningApp-ttk-py\data2.xlsx"
 
         if not os.path.exists(filepath):
             workbook=openpyxl.Workbook()
@@ -114,7 +123,7 @@ def nxtpg():
         root.destroy()
 
 
-btm_fm=tk.Frame(root)
+btm_fm=Frame(root)
 
 
 
@@ -124,11 +133,11 @@ btm_fm.pack(side=tk.BOTTOM,pady=10)
 
 # ....................................................main frame..........................................................
 
-main_frame=tk.Frame(root)
+main_frame=Frame(root)
 
 # ............................................frame 1..................................................................
 
-pg1=tk.Frame(main_frame)
+pg1=Frame(main_frame)
 
 # lbl=Label(pg1)
 # lbl.pack()
@@ -144,7 +153,7 @@ pg1.pack(pady=150)
 
 # .............................................frame 2.................................................................
 
-pg2=tk.Frame(main_frame)
+pg2=Frame(main_frame)
 
 l1=Label(pg2,text="Let's Learn:",font=("Helvetica",16)).pack()
 
@@ -162,7 +171,7 @@ style.configure('warning.TButton',font=('Helvetica',18))
 
 # .............................................frame 3.................................................................
 
-pg3=tk.Frame(main_frame)
+pg3=Frame(main_frame)
 
 
 lbl4=tk.Label(pg3,text="Choose the correct option:",font=("bold",22)).pack()
@@ -181,7 +190,7 @@ feedback_label1 = tk.Label(
 feedback_label1.pack(pady=15)
 # .............................................frame 4.................................................................
 
-pg4=tk.Frame(main_frame)
+pg4=Frame(main_frame)
 
 l2=Label(pg4,text="Let's Learn:",font=("Helvetica",16)).pack()
 
@@ -195,7 +204,7 @@ style.configure('success.TButton',font=('Helvetica',18))
 butt4=tb.Button(pg4,text="PLEASE",style="success.TButton",width=29).pack(pady=2)
 
 # .............................................frame 5.................................................................
-pg5=tk.Frame(main_frame)
+pg5=Frame(main_frame)
 
 lbl6=tk.Label(pg5,text="Choose the correct option:",font=("bold",22)).pack()
 lbl7=Label(pg5)
@@ -215,7 +224,7 @@ feedback_label2.pack(pady=15)
 
 
 # .............................................frame 7.................................................................
-pg7=tk.Frame(main_frame)
+pg7=Frame(main_frame)
 l3=Label(pg7,text="Let's Learn:",font=("Helvetica",16)).pack()
 lbl8=Label(pg7)
 lbl8.pack()
@@ -236,7 +245,7 @@ def click_bind(e):
 
 
 # .............................................frame 8.................................................................
-pg8=tb.Frame(main_frame)
+pg8=Frame(main_frame)
 lol=Label(pg8,text="Select From DropDown",font=("arial",30),width=24).pack()
 #choose between me and please
 lbl8=Label(pg8)
@@ -258,7 +267,7 @@ feedback_label4 = tk.Label(
 feedback_label4.pack()
 
 # .............................................frame 9.................................................................
-pg9=tk.Frame(main_frame)
+pg9=Frame(main_frame)
 l4=Label(pg9,text="Let's Learn:",font=("Helvetica",16)).pack()
 lbl9=Label(pg9)
 lbl9.pack()
@@ -271,7 +280,7 @@ butt8=tb.Button(pg9,text="FINE",style="success.TButton",width=29).pack(pady=2)
 
 
 # .............................................frame 10.................................................................
-pg10=tk.Frame(main_frame)
+pg10=Frame(main_frame)
 
 lbl10=tk.Label(pg10,text="Choose the correct option:",font=("bold",22)).pack()
 lbl11=Label(pg10)
@@ -289,7 +298,7 @@ feedback_label3 = tk.Label(
 feedback_label3.pack(pady=15)
 
 # .............................................frame 11.................................................................
-pg11=tk.Frame(main_frame)
+pg11=Frame(main_frame)
 
 lbl12a=tk.Label(pg11,text="Use Drag and Drop To",font=("bold",19)).pack()
 lbl12=tk.Label(pg11,text="Complete The Following Sentence from scattered words:",font=("bold",20)).pack()
@@ -298,7 +307,7 @@ lbl13.pack()
 player=tkvideo("iamfine2.mp4",lbl13,loop=1,size=(400,300))
 player.play()
 
-fm=tk.Frame(pg11)
+fm=Frame(pg11)
 LL=tk.Label(fm,text="I Am...",font=("arial",21),width=60,fg="#222456")
 LL.pack(pady=30)
 fm.pack(pady=30)
@@ -357,7 +366,7 @@ label5.bind("<B1-Motion>",drag_motion)
 
 
 # .............................................frame 12.................................................................
-pg12=tk.Frame(main_frame)
+pg12=Frame(main_frame)
 l5=Label(pg12,text="Let's Learn:",font=("Helvetica",16)).pack()
 lbl14=Label(pg12)
 lbl14.pack()
@@ -369,9 +378,9 @@ style.configure('success.TButton',font=('Helvetica',18))
 butt11=tb.Button(pg12,text="HELP",style="success.TButton",width=29).pack(pady=2)
 
 # .............................................frame 6.................................................................
-pg6=tk.Frame(main_frame)
+pg6=Frame(main_frame)
 
-pg6=tk.Frame(main_frame)
+# pg6=Frame(main_frame)
 
 
 lbl41=tk.Label(pg6,text="Choose the correct option:",font=("bold",22)).pack()
